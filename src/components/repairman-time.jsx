@@ -26,7 +26,7 @@ const RepairmanTime = () => {
    }, []);
 
    return (
-      <div className="text-sm font-normal text-gray-500 overscroll-y-auto ">
+      <div className="text-sm font-normal text-gray-500  ">
          <div className="p-4">
             <p className="relative">
                تعیین تاریخ حضور متخصص
@@ -42,14 +42,14 @@ const RepairmanTime = () => {
                            className={`border-2 rounded-md ${
                               d.id === dayIndex
                                  ? "border-dosma text-dosma "
-                                 : "border-gray-300 text-gray-500 hover:opacity-60"
-                           }  text-center flex flex-col justify-center w-[64px] h-[64px] m-3 mr-0 `}
+                                 : "border-gray-300 text-gray-600 hover:opacity-60"
+                           }  text-center flex flex-col justify-center w-[55px] h-[55px] m-2 mr-0 `}
                         >
-                           <div>{d.date}</div>
-                           <div>{d.day}</div>
+                           <div className="font-semibold ">{d.date}</div>
+                           <div className="text-xs">{d.day}</div>
                         </div>
                         {index === 0 && (
-                           <div className="absolute text-xs top-0 right-0 bg-white border-2 border-gray-300 rounded-full px-2">
+                           <div className="absolute text-xs top-0 right-0 bg-white border-2 border-gray-300 rounded-full px-1">
                               امروز
                            </div>
                         )}
@@ -58,7 +58,7 @@ const RepairmanTime = () => {
                })}
             </ul>
          </div>
-         <div className="p-4">
+         <div className="px-4">
             <p className="relative">
                تعیین ساعت حضور متخصص
                <HiOutlineCalendar className="absolute text-dosma -right-5 top-0 text-lg " />

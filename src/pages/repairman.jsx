@@ -45,7 +45,7 @@ const Repairman = ({ title }) => {
                         <div>{tab.title}</div>
                      </li>
                      {tabIndex === tab.id && (
-                        <div className="p-2 border rounded-md">{tab.body}</div>
+                        <div className="p-2 border rounded-md overflow-y-auto">{tab.body}</div>
                      )}
                   </div>
                );
