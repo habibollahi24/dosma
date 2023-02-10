@@ -4,7 +4,7 @@ module.exports = {
    theme: {
       extend: {
          colors: {
-            dosma: "#51a8b1",
+            dosma: "#518db1",
          },
       },
    },

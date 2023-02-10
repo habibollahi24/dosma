@@ -34,14 +34,14 @@
    }
 
    .scrollbar::-webkit-scrollbar-thumb {
-      background: #7bafb4;
+      background: #518db1;
       border-radius: 100vh;
       border: 3px solid #f6f7ed;
       cursor: pointer;
    }
 
    .scrollbar::-webkit-scrollbar-thumb:hover {
-      background: #51a8b1;
+      background: #6b98b3;
    }
 }
 
