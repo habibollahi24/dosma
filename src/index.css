@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+   font-family: "sahel";
+   src: url("./assets/fonts/Farsi-Digits/Sahel-FD.ttf") format("truetype");
+   font-weight: 300;
+   font-style: normal;
+   font-display: fallback;
+}
+@font-face {
+   font-family: "sahel";
+   src: url("./assets/fonts/Farsi-Digits/Sahel-Bold-FD.ttf") format("truetype");
+   font-weight: 500;
+   font-style: normal;
+   font-display: fallback;
+}
+
+* {
+   font-family: sahel, sans-serif;
+}
+
+@layer utilities {
+   .scrollbar::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+   }
+
+   .scrollbar::-webkit-scrollbar-track {
+      border-radius: 100vh;
+      background: #eeeeee;
+      cursor: pointer;
+   }
+
+   .scrollbar::-webkit-scrollbar-thumb {
+      background: #7bafb4;
+      border-radius: 100vh;
+      border: 3px solid #f6f7ed;
+      cursor: pointer;
+   }
+
+   .scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #51a8b1;
+   }
+}
+
+@layer base {
+   body {
+      @apply bg-gray-100;
+   }
+   .my-container {
+      @apply container mx-auto max-w-sm bg-white p-4;
+   }
+   .primary-button {
+      @apply bg-dosma  px-5 py-3  rounded-full text-gray-100 text-sm transition-all border-2 border-dosma  hover:bg-transparent hover:text-dosma;
+   }
+   .secondary-button {
+      @apply bg-transparent  px-5 py-3  rounded-full text-dosma text-sm transition-all border-2 border-dosma  hover:bg-dosma hover:text-white;
+   }
+}
+input[type="time"] {
+   border: none;
+   color: #2a2c2d;
+   font-size: 14px;
+
+   margin: 0 10px;
+   width: 90px;
+}
+input[type="time"]:focus {
+   outline: none;
+}
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+   display: flex;
+}
+input[type="time"]::-webkit-datetime-edit-text {
+   padding: 13px 5px;
+}
+input[type="time"]::-webkit-datetime-edit-hour-field {
+   background-color: white;
+   border-radius: 15%;
+   padding: 13px;
+   color: #51a8b1;
+   cursor: pointer;
+}
+input[type="time"]::-webkit-datetime-edit-minute-field {
+   background-color: white;
+   border-radius: 15%;
+   padding: 13px;
+   color: #51a8b1;
+   cursor: pointer;
+}
+input[type="time"]::-webkit-datetime-edit-minute-field:focus {
+   background-color: rgb(240, 240, 240);
+}
+input[type="time"]::-webkit-datetime-edit-hour-field:focus {
+   background-color: rgb(240, 240, 240);
+}
+input[type="time"]::-webkit-datetime-edit-ampm-field {
+   display: none;
+}
+input[type="time"]::-webkit-clear-button {
+   display: none;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+   background: none;
+   display: none;
+}
